@@ -15,6 +15,7 @@ class BooksController < ApplicationController
   end
 
   def index
+
     @book = Book.new
     @book_images = Book.all
   end

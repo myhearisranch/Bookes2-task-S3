@@ -1,0 +1,7 @@
+<div class="profile-container">
+  <h3 class="profile-name"><%= @user.name %></h3>
+  
+   <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+
+  <button><%= link_to "", edit_user_path(@user) %></button>
+</div>
