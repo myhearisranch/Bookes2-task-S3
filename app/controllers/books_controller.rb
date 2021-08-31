@@ -1,21 +1,21 @@
 class BooksController < ApplicationController
 
-  def new
-
-  end
 
   def create
     @book = Book.new(book_image_params)
     @book.user_id = current_user.id
    if @book.save
+      flash[:notice] = 'successfully'
       redirect_to books_path
     else
-      render :new
+      flash[:notice] = "error"
+      render :index
+
+
     end
   end
 
   def index
-
     @book = Book.new
     @book_images = Book.all
   end
@@ -30,8 +30,15 @@ class BooksController < ApplicationController
 
   def update
     book = Book.find(params[:id])
-    book.update
-    redirect_to books_path
+
+    if book.update(book_image_params)
+      flash[:notice] = "successfully"
+       redirect_to books_path(book.id)
+    else
+      flash[:notice] = "error"
+      render :index
+    end
+
   end
 
   def destroy

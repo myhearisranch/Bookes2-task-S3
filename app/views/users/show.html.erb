@@ -1,7 +1,15 @@
-<div class="profile-container">
-  <h3 class="profile-name"><%= @user.name %></h3>
-  
-   <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+<% if flash[:notice] %>
+ <p><%= flash[:notice] %></p>
+ <% end %>
 
-  <button><%= link_to "", edit_user_path(@user) %></button>
+ <h1>User info</h1>
+
+<div class="profile-container">
+  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+  <h3 class="profile-name"><%= @user.name %></h3>
+  <%= @user.introduction %>
+
+
+
+  <button><%= link_to "ボダン", edit_user_path(@user) %></button>
 </div>
