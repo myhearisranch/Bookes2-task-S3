@@ -8,8 +8,5 @@
   <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
   <h3 class="profile-name"><%= @user.name %></h3>
   <%= @user.introduction %>
-
-
-
-  <button><%= link_to "ボダン", edit_user_path(@user) %></button>
+ <button><%= link_to "ボダン", edit_user_path(@user) %></button>
 </div>
