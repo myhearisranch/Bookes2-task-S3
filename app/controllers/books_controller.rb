@@ -3,11 +3,11 @@ class BooksController < ApplicationController
 
 
   def create
-    @book = Book.new(book_image_params)
+    @book = Book.new(book_params)
     @book.user_id = current_user.id
    if @book.save
       flash[:notice] = 'successfully'
-      redirect_to books_path
+      redirect_to book_path(@book)
     else
       @books = Book.all
       flash[:notice] = "error"
@@ -24,7 +24,9 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book_image = Book.find(params[:id])
+    @user = current_user
+    @book = Book.new
+    @book = Book.find(params[:id])
   end
 
   def edit

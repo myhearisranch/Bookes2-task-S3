@@ -1,7 +1,15 @@
 class UsersController < ApplicationController
+
+ def index
+  @user = current_user
+  @book =Book.new
+  @users = User.all
+ end
+
  def show
+     @book = Book.new
      @user = User.find(params[:id])
-     @post_images = @user.books.page(params[:page]).reverse_order
+     @books = @user.books.page(params[:page]).reverse_order
  end
 
  def edit
