@@ -36,24 +36,23 @@
   <% end %>
 <% end %>
 
-<%= form_with model: @book, local:true do |f| %>
-<div class="form-group">
-    <label>Title<label>
-        <div class=""> <%= f.text_field :title %></div>
-</div>
+<%= form_with model:@book, local:true do |f| %>
+ <div class ="form-group">
+  <label>Title</label>
+  <text_area class=""><%= f.text_field :title %></text_area>
+ </div>
 
-<div class="form-group">
-     <label>Opinon<label>
-     <div class=""><%= f.text_area :body %></div>
-</div>
-
-<div class="form-control">
-     <div class="btn btn-success"><%= f.submit 'Create Book' %></div>
-</div>
-
+ <div class ="form-group">
+  <label>Opinon</label>
+  <text_area class= ><%= f.text_area :body %></text_area>
+ <div class="form-group">
+  <button class="btn btn-success">
+   <%= f.submit 'Create Book' %>
+  </button>
+ </div>
   <% end %>
-        </div>
-
+ </div>
+</div>
 </form>
 
 <div class="col-md-8 offset-md-1">
@@ -63,10 +62,10 @@
           <th>Title</th>
           <th>Opinon</th>
       </tr>
-      <% @books.each do |book| %>
+      <% @user_books.each do |book| %>
       <tr>
-          <td>book.title</td>
-          <td>book.body</td>
+          <td><%= book.title %></td>
+          <td><%= book.body %></td>
       </tr>
       <% end %>
   </table>

@@ -1,20 +1,22 @@
 class BooksController < ApplicationController
-  before_action :correct_user, only: [:edit, :update]
+  #before_action :correct_user, only: [:edit, :update]
 
 
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-   if @book.save
-      flash[:notice] = 'successfully'
-      redirect_to book_path(@book)
-    else
-      @books = Book.all
-      flash[:notice] = "error"
-      render :index
+    @book.save
+
+  # if @book.save
+  #     flash[:notice] = 'successfully'
+  #     redirect_to book_path(@book)
+  #   else
+  #     @books = Book.all
+  #     flash[:notice] = "error"
+  #     render :index
 
 
-    end
+
   end
 
   def index
@@ -34,11 +36,11 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
+    @book = Book.find(params[:id])
 
-    if book.update(book_params)
+    if @book.update(book_params)
       flash[:notice] = "successfully"
-      redirect_to book_path(book.id)
+      redirect_to book_path(@book.id)
     else
       flash[:notice] = "error"
       render :index

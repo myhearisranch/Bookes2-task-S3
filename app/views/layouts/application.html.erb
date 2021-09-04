@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookers2Ver2</title>
+    <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -23,7 +23,7 @@
 
 
            <% if user_signed_in? %>
-          <li><a class="fas fa-home nav-link text-light" href="/users/"> Home</a></li>
+          <li class="fas fa-home nav-link text-light"><%= link_to "Home" , user_path(current_user.id) %></li>
           <li class="fas fa-users nav-link text-light"> <%= link_to "Users" ,users_path %> </li>
           <li  class="fas fa-book-open nav-link text-light"> <%= link_to "Books" ,books_path %> </li>
           <li class="fas fa-sign-out-alt nav-link text-light"> <%= link_to"logout" , destroy_user_session_path, method: :delete %></li>
@@ -38,15 +38,20 @@
     </div>
   </nav>
 </header>
-<% if flash[:notice] %>
- <p><%= flash[:notice] %></p>
- <% end %>
+
     <div class="container">
+    <%- flash.each do |key, value|  %>
+    <%= content_tag(:div, value, class: "flash flash__#{key}") %>
+    <% end %>
         <%= yield %>
     </div>
     <footer>
       <div class="container mt-5">
+        <div class="row">
+    	   <div class="mx-auto">
         CopyRight Infratop.inc
+        </div>
+        </div
       </div>
     </footer>
     </html>
