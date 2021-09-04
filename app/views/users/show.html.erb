@@ -2,17 +2,33 @@
  <p><%= flash[:notice] %></p>
  <% end %>
 
- <h1>User info</h1>
- 
-
+<div class="px-5 px-sm-0">
+    <div class="row">
+        <div class="col-md-3">
+             <h1>User info</h1>
 <div class="profile-container">
   <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
-  <h3 class="profile-name"><%= @user.name %></h3>
-  <%= @user.introduction %>
- <button><%= link_to "ボダン", edit_user_path(@user) %></button>
+  <table class="table">
+      <tbody>
+          <tr></tr>
+          <tr>
+              <th>name</th>
+              <th><%= @user.name %></th>
+          </tr>
+          <tr>
+              <th>introduction</th>
+              <th><%= @user.introduction %></th>
+          </tr>
+      </tbody>
+  </table>
+
+  <div class="row">
+      <button class="btn btn-outline-secondary btn-block fas fa-user-cog"><%= link_to "", edit_user_path(@user) %></button>
+  </div>
 </div>
 
- <h1>New book</h1>
+<form>
+     <h1>New book</h1>
 <% if @book.errors.any? %>
   <%= @book.errors.count %>件のエラーが発生しました
   <% @book.errors.full_messages.each do |message| %>
@@ -21,15 +37,28 @@
 <% end %>
 
 <%= form_with model: @book, local:true do |f| %>
-  <h4>Title</h4>
-   <%= f.text_field :title %>
-  <h4>Opinon</h4>
-   <%= f.text_area :body %>
-  <%= f.submit 'Create Book' %>
-  <% end %>
+<div class="form-group">
+    <label>Title<label>
+        <div class=""> <%= f.text_field :title %></div>
+</div>
 
-  <h1>Books</h1>
-  <table>
+<div class="form-group">
+     <label>Opinon<label>
+     <div class=""><%= f.text_area :body %></div>
+</div>
+
+<div class="form-control">
+     <div class="btn btn-success"><%= f.submit 'Create Book' %></div>
+</div>
+
+  <% end %>
+        </div>
+
+</form>
+
+<div class="col-md-8 offset-md-1">
+    <h2>Books</h2>
+   <table class="table table-hover table-inverse">
       <tr>
           <th>Title</th>
           <th>Opinon</th>
@@ -41,4 +70,6 @@
       </tr>
       <% end %>
   </table>
-
+</div>
+ </div>
+</div>

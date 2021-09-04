@@ -1,17 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+            <h2>Userinfo</h2>
+        <%= form_with model:@user, local:true do |f| %>
 
-<%= form_with model:@user, local:true do |f| %>
-<div>
+<div class="form-group">
   <label for="inputName">Name</label>
   <%= f.text_field :name, autofocus: true, id: "inputName"%>
 </div>
-<div>
+
+<div class="form-group">
    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
   <label for="inputImage">image</label>
   <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
 </div>
-<div>
+
+<div class="form-group">
  <%= f.text_field :introduction, autofocus: true, id: "inputintroduction"%>
 </div>
 
- <%= f.submit "Update User" %>
+<div class="form-group">
+    <button class="btn-secondary">
+      <%= f.submit "Update User" %>
+    </button>
+</div>
 <% end %>
+</div>
+    </div>
+
+</div>
+

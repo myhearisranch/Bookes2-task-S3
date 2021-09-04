@@ -38,7 +38,7 @@ class BooksController < ApplicationController
 
     if book.update(book_params)
       flash[:notice] = "successfully"
-      redirect_to books_path
+      redirect_to book_path(book.id)
     else
       flash[:notice] = "error"
       render :index
