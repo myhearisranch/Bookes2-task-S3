@@ -1,23 +1,21 @@
 class BooksController < ApplicationController
-  #before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
 
   def create
+    @user=current_user
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-    @book.save
 
-  # if @book.save
-  #     flash[:notice] = 'successfully'
-  #     redirect_to book_path(@book)
-  #   else
-  #     @books = Book.all
-  #     flash[:notice] = "error"
-  #     render :index
-
-
-
+  if @book.save
+      flash[:notice] = 'successfully'
+      redirect_to book_path(@book)
+    else
+      @books = Book.all
+      flash[:notice] = "error"
+      render :index
   end
+end
 
   def index
   @user = current_user
@@ -43,7 +41,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     else
       flash[:notice] = "error"
-      render :index
+      render :edit
     end
 
   end
@@ -65,5 +63,7 @@ class BooksController < ApplicationController
     @user = @book.user
     redirect_to(books_path) unless @user == current_user
   end
+
+
 
 end

@@ -100,8 +100,8 @@ Userモデルのテスト
 [31m      自分の投稿と他人の投稿のオピニオンが表示される (FAILED - 8)[0m
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 9)[0m
-[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 10)[0m
-[31m      「New book」と表示される (FAILED - 11)[0m
+[32m      自分のユーザ編集画面へのリンクが存在する[0m
+[31m      「New book」と表示される (FAILED - 10)[0m
 [32m      titleフォームが表示される[0m
 [32m      titleフォームに値が入っていない[0m
 [32m      opinionフォームが表示される[0m
@@ -109,24 +109,24 @@ Userモデルのテスト
 [32m      Create Bookボタンが表示される[0m
     投稿成功のテスト
 [32m      自分の新しい投稿が正しく保存される[0m
-[31m      リダイレクト先が、保存できた投稿の詳細画面になっている (FAILED - 12)[0m
+[32m      リダイレクト先が、保存できた投稿の詳細画面になっている[0m
   自分の投稿詳細画面のテスト
     表示内容の確認
 [32m      URLが正しい[0m
-[31m      「Book detail」と表示される (FAILED - 13)[0m
+[31m      「Book detail」と表示される (FAILED - 11)[0m
 [32m      ユーザ画像・名前のリンク先が正しい[0m
-[31m      投稿のtitleが表示される (FAILED - 14)[0m
-[31m      投稿のopinionが表示される (FAILED - 15)[0m
+[31m      投稿のtitleが表示される (FAILED - 12)[0m
+[31m      投稿のopinionが表示される (FAILED - 13)[0m
 [32m      投稿の編集リンクが表示される[0m
 [32m      投稿の削除リンクが表示される[0m
     サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 16)[0m
-[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 17)[0m
-[31m      「New book」と表示される (FAILED - 18)[0m
+[31m      自分の名前と紹介文が表示される (FAILED - 14)[0m
+[32m      自分のユーザ編集画面へのリンクが存在する[0m
+[31m      「New book」と表示される (FAILED - 15)[0m
 [32m      titleフォームが表示される[0m
 [32m      titleフォームに値が入っていない[0m
 [32m      opinionフォームが表示される[0m
-[31m      opinionフォームに値が入っていない (FAILED - 19)[0m
+[31m      opinionフォームに値が入っていない (FAILED - 16)[0m
 [32m      Create Bookボタンが表示される[0m
     投稿成功のテスト
 [32m      自分の新しい投稿が正しく保存される[0m
@@ -138,26 +138,26 @@ Userモデルのテスト
   自分の投稿編集画面のテスト
     表示の確認
 [32m      URLが正しい[0m
-[31m      「Editing Book」と表示される (FAILED - 20)[0m
+[31m      「Editing Book」と表示される (FAILED - 17)[0m
 [32m      title編集フォームが表示される[0m
 [32m      opinion編集フォームが表示される[0m
 [32m      Update Bookボタンが表示される[0m
 [32m      Showリンクが表示される[0m
 [32m      Backリンクが表示される[0m
     編集成功のテスト
-[31m      titleが正しく更新される (FAILED - 21)[0m
-[31m      bodyが正しく更新される (FAILED - 22)[0m
-[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 23)[0m
+[31m      titleが正しく更新される (FAILED - 18)[0m
+[31m      bodyが正しく更新される (FAILED - 19)[0m
+[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 20)[0m
   ユーザ一覧画面のテスト
     表示内容の確認
 [32m      URLが正しい[0m
 [32m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する[0m
-[31m      自分と他人の名前がそれぞれ表示される (FAILED - 24)[0m
-[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 25)[0m
+[31m      自分と他人の名前がそれぞれ表示される (FAILED - 21)[0m
+[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 22)[0m
     サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 26)[0m
+[31m      自分の名前と紹介文が表示される (FAILED - 23)[0m
 [32m      自分のユーザ編集画面へのリンクが存在する[0m
-[31m      「New book」と表示される (FAILED - 27)[0m
+[31m      「New book」と表示される (FAILED - 24)[0m
 [32m      titleフォームが表示される[0m
 [32m      titleフォームに値が入っていない[0m
 [32m      opinionフォームが表示される[0m
@@ -167,13 +167,13 @@ Userモデルのテスト
     表示の確認
 [32m      URLが正しい[0m
 [32m      投稿一覧のユーザ画像のリンク先が正しい[0m
-[31m      投稿一覧に自分の投稿のtitleが表示され、リンクが正しい (FAILED - 28)[0m
-[31m      投稿一覧に自分の投稿のopinionが表示される (FAILED - 29)[0m
-[31m      他人の投稿は表示されない (FAILED - 30)[0m
+[31m      投稿一覧に自分の投稿のtitleが表示され、リンクが正しい (FAILED - 25)[0m
+[31m      投稿一覧に自分の投稿のopinionが表示される (FAILED - 26)[0m
+[31m      他人の投稿は表示されない (FAILED - 27)[0m
     サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 31)[0m
+[31m      自分の名前と紹介文が表示される (FAILED - 28)[0m
 [32m      自分のユーザ編集画面へのリンクが存在する[0m
-[31m      「New book」と表示される (FAILED - 32)[0m
+[31m      「New book」と表示される (FAILED - 29)[0m
 [32m      titleフォームが表示される[0m
 [32m      titleフォームに値が入っていない[0m
 [32m      opinionフォームが表示される[0m
@@ -193,30 +193,30 @@ Userモデルのテスト
 
 [STEP3] 仕上げのテスト
   サクセスメッセージのテスト
-[31m    ユーザ新規登録成功時 (FAILED - 33)[0m
-[31m    ユーザログイン成功時 (FAILED - 34)[0m
-[31m    ユーザログアウト成功時 (FAILED - 35)[0m
-[31m    ユーザのプロフィール情報更新成功時 (FAILED - 36)[0m
-[31m    投稿データの新規投稿成功時: 投稿一覧画面から行います。 (FAILED - 37)[0m
-[31m    投稿データの更新成功時 (FAILED - 38)[0m
+[31m    ユーザ新規登録成功時 (FAILED - 30)[0m
+[31m    ユーザログイン成功時 (FAILED - 31)[0m
+[31m    ユーザログアウト成功時 (FAILED - 32)[0m
+[31m    ユーザのプロフィール情報更新成功時 (FAILED - 33)[0m
+[31m    投稿データの新規投稿成功時: 投稿一覧画面から行います。 (FAILED - 34)[0m
+[31m    投稿データの更新成功時 (FAILED - 35)[0m
   処理失敗時のテスト
     ユーザ新規登録失敗: nameを1文字にする
 [32m      新規登録されない[0m
-[31m      新規登録画面を表示しており、フォームの内容が正しい (FAILED - 39)[0m
-[31m      バリデーションエラーが表示される (FAILED - 40)[0m
+[31m      新規登録画面を表示しており、フォームの内容が正しい (FAILED - 36)[0m
+[31m      バリデーションエラーが表示される (FAILED - 37)[0m
     ユーザのプロフィール情報編集失敗: nameを1文字にする
 [32m      更新されない[0m
-[31m      ユーザ編集画面を表示しており、フォームの内容が正しい (FAILED - 41)[0m
-[31m      バリデーションエラーが表示される (FAILED - 42)[0m
+[31m      ユーザ編集画面を表示しており、フォームの内容が正しい (FAILED - 38)[0m
+[31m      バリデーションエラーが表示される (FAILED - 39)[0m
     投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする
 [32m      投稿が保存されない[0m
-[31m      投稿一覧画面を表示している (FAILED - 43)[0m
+[31m      投稿一覧画面を表示している (FAILED - 40)[0m
 [32m      新規投稿フォームの内容が正しい[0m
-[31m      バリデーションエラーが表示される (FAILED - 44)[0m
+[31m      バリデーションエラーが表示される (FAILED - 41)[0m
     投稿データの更新失敗: titleを空にする
 [32m      投稿が更新されない[0m
-[31m      投稿編集画面を表示しており、フォームの内容が正しい (FAILED - 45)[0m
-[31m      エラーメッセージが表示される (FAILED - 46)[0m
+[32m      投稿編集画面を表示しており、フォームの内容が正しい[0m
+[31m      エラーメッセージが表示される (FAILED - 42)[0m
   ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する
 [32m    ユーザ一覧画面[0m
 [32m    ユーザ詳細画面[0m
@@ -228,30 +228,30 @@ Userモデルのテスト
     他人の投稿詳細画面のテスト
       表示内容の確認
 [32m        URLが正しい[0m
-[31m        「Book detail」と表示される (FAILED - 47)[0m
-[31m        ユーザ画像・名前のリンク先が正しい (FAILED - 48)[0m
-[31m        投稿のtitleが表示される (FAILED - 49)[0m
-[31m        投稿のopinionが表示される (FAILED - 50)[0m
-[31m        投稿の編集リンクが表示されない (FAILED - 51)[0m
-[31m        投稿の削除リンクが表示されない (FAILED - 52)[0m
+[31m        「Book detail」と表示される (FAILED - 43)[0m
+[31m        ユーザ画像・名前のリンク先が正しい (FAILED - 44)[0m
+[31m        投稿のtitleが表示される (FAILED - 45)[0m
+[31m        投稿のopinionが表示される (FAILED - 46)[0m
+[31m        投稿の編集リンクが表示されない (FAILED - 47)[0m
+[31m        投稿の削除リンクが表示されない (FAILED - 48)[0m
       サイドバーの確認
-[31m        他人の名前と紹介文が表示される (FAILED - 53)[0m
-[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 54)[0m
-[31m        自分の名前と紹介文は表示されない (FAILED - 55)[0m
-[32m        自分のユーザ編集画面へのリンクは存在しない[0m
+[31m        他人の名前と紹介文が表示される (FAILED - 49)[0m
+[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 50)[0m
+[31m        自分の名前と紹介文は表示されない (FAILED - 51)[0m
+[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 52)[0m
     他人の投稿編集画面
-[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 56)[0m
+[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 53)[0m
     他人のユーザ詳細画面のテスト
       表示の確認
 [32m        URLが正しい[0m
-[31m        投稿一覧のユーザ画像のリンク先が正しい (FAILED - 57)[0m
-[31m        投稿一覧に他人の投稿のtitleが表示され、リンクが正しい (FAILED - 58)[0m
-[31m        投稿一覧に他人の投稿のopinionが表示される (FAILED - 59)[0m
-[31m        自分の投稿は表示されない (FAILED - 60)[0m
+[31m        投稿一覧のユーザ画像のリンク先が正しい (FAILED - 54)[0m
+[31m        投稿一覧に他人の投稿のtitleが表示され、リンクが正しい (FAILED - 55)[0m
+[31m        投稿一覧に他人の投稿のopinionが表示される (FAILED - 56)[0m
+[31m        自分の投稿は表示されない (FAILED - 57)[0m
       サイドバーの確認
-[31m        他人の名前と紹介文が表示される (FAILED - 61)[0m
+[31m        他人の名前と紹介文が表示される (FAILED - 58)[0m
 [32m        他人のユーザ編集画面へのリンクが存在する[0m
-[31m        自分の名前と紹介文は表示されない (FAILED - 62)[0m
+[31m        自分の名前と紹介文は表示されない (FAILED - 59)[0m
 [32m        自分のユーザ編集画面へのリンクは存在しない[0m
     他人のユーザ情報編集画面
 [32m      遷移できず、自分のユーザ詳細画面にリダイレクトされる[0m
@@ -442,12 +442,7 @@ Failures:
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
      [36m# ./spec/system/02_after_login_spec.rb:66:in `block (4 levels) in <main>'[0m
 
-  10) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: edit_user_path(user)[0m
-      [31m  expected to find link "" with href "/users/2/edit" but there were no matches[0m
-      [36m# ./spec/system/02_after_login_spec.rb:70:in `block (4 levels) in <main>'[0m
-
-  11) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される
+  10) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -468,16 +463,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:73:in `block (4 levels) in <main>'[0m
 
-  12) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている
-      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + [1;34;4mBook[0m.last.id.to_s[0m
-      [31m[0m
-      [31m  expected: "/books/3"[0m
-      [31m       got: "/books"[0m
-      [31m[0m
-      [31m  (compared using ==)[0m
-      [36m# ./spec/system/02_after_login_spec.rb:103:in `block (4 levels) in <main>'[0m
-
-  13) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
+  11) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBook detail[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -498,7 +484,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:118:in `block (4 levels) in <main>'[0m
 
-  14) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
+  12) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.title[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -519,7 +505,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:124:in `block (4 levels) in <main>'[0m
 
-  15) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
+  13) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -540,7 +526,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:127:in `block (4 levels) in <main>'[0m
 
-  16) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+  14) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -561,12 +547,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:139:in `block (4 levels) in <main>'[0m
 
-  17) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: edit_user_path(user)[0m
-      [31m  expected to find link "" with href "/users/2/edit" but there were no matches[0m
-      [36m# ./spec/system/02_after_login_spec.rb:143:in `block (4 levels) in <main>'[0m
-
-  18) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される
+  15) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -587,12 +568,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:146:in `block (4 levels) in <main>'[0m
 
-  19) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 opinionフォームに値が入っていない
+  16) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 opinionフォームに値が入っていない
       [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m).text).to be_blank[0m
-      [31m  expected `"15a1zwtk5ussntbzg95p".blank?` to be truthy, got false[0m
+      [31m  expected `"pamr2f2zwznj0ola2oiz".blank?` to be truthy, got false[0m
       [36m# ./spec/system/02_after_login_spec.rb:158:in `block (4 levels) in <main>'[0m
 
-  20) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される
+  17) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mEditing Book[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -613,46 +594,34 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:207:in `block (4 levels) in <main>'[0m
 
-  21) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
+  18) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
       [31mFailure/Error: [0m[32mexpect[0m(book.reload.title).not_to eq @book_old_title[0m
       [31m[0m
-      [31m  expected: value != "b6ya6"[0m
-      [31m       got: "b6ya6"[0m
+      [31m  expected: value != "u17ek"[0m
+      [31m       got: "u17ek"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:236:in `block (4 levels) in <main>'[0m
 
-  22) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
+  19) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
       [31mFailure/Error: [0m[32mexpect[0m(book.reload.body).not_to eq @book_old_body[0m
       [31m[0m
-      [31m  expected: value != "1clu0vtowc8rlfgs5boq"[0m
-      [31m       got: "1clu0vtowc8rlfgs5boq"[0m
+      [31m  expected: value != "y1q14be38awsp8pjyj84"[0m
+      [31m       got: "y1q14be38awsp8pjyj84"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:239:in `block (4 levels) in <main>'[0m
 
-  23) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBook detail[1;31m'[0m[31m[0m[0m
+  20) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
+      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + book.id.to_s[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/document.rb:24:in `text'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/queries/text_query.rb:108:in `text'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/queries/text_query.rb:29:in `resolve_for'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/matchers.rb:862:in `block in _verify_text'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/matchers.rb:861:in `_verify_text'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/matchers.rb:676:in `assert_text'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/have_text.rb:10:in `element_matches?'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:243:in `block (4 levels) in <main>'[0m
+      [31m  expected: "/books/1"[0m
+      [31m       got: "/books/3"[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/system/02_after_login_spec.rb:242:in `block (4 levels) in <main>'[0m
 
-  24) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の名前がそれぞれ表示される
+  21) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の名前がそれぞれ表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -673,12 +642,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:261:in `block (4 levels) in <main>'[0m
 
-  25) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
+  22) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mShow[1;31m'[0m[31m[0m, [35mhref[0m: user_path(user)[0m
       [31m  expected to find link "Show" with href "/users/2" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:265:in `block (4 levels) in <main>'[0m
 
-  26) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+  23) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -699,7 +668,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:272:in `block (4 levels) in <main>'[0m
 
-  27) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される
+  24) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -720,12 +689,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:279:in `block (4 levels) in <main>'[0m
 
-  28) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
+  25) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link book.title, [35mhref[0m: book_path(book)[0m
-      [31m  expected to find link "2kqiu" with href "/books/1" but there were no matches[0m
+      [31m  expected to find link "5t2hd" with href "/books/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:312:in `block (4 levels) in <main>'[0m
 
-  29) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のopinionが表示される
+  26) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のopinionが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -746,7 +715,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:315:in `block (4 levels) in <main>'[0m
 
-  30) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 他人の投稿は表示されない
+  27) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 他人の投稿は表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_content other_book.title[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -767,7 +736,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:58:in `does_not_match?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:319:in `block (4 levels) in <main>'[0m
 
-  31) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+  28) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -788,7 +757,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:326:in `block (4 levels) in <main>'[0m
 
-  32) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される
+  29) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -809,7 +778,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/02_after_login_spec.rb:333:in `block (4 levels) in <main>'[0m
 
-  33) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザ新規登録成功時
+  30) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザ新規登録成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -830,7 +799,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:19:in `block (3 levels) in <main>'[0m
 
-  34) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログイン成功時
+  31) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログイン成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -851,7 +820,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:26:in `block (3 levels) in <main>'[0m
 
-  35) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
+  32) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
       [31mFailure/Error: [0mclick_link logout_link[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -865,7 +834,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:35:in `block (3 levels) in <main>'[0m
 
-  36) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
+  33) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -886,12 +855,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:45:in `block (3 levels) in <main>'[0m
 
-  37) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの新規投稿成功時: 投稿一覧画面から行います。
+  34) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの新規投稿成功時: 投稿一覧画面から行います。
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [31mCapybara::Ambiguous:[0m
+      [31m  Ambiguous match, found 2 elements matching visible xpath "/html"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:301:in `block in synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
@@ -907,12 +876,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:56:in `block (3 levels) in <main>'[0m
 
-  38) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの更新成功時
+  35) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの更新成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [31mCapybara::Ambiguous:[0m
+      [31m  Ambiguous match, found 2 elements matching visible xpath "/html"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:301:in `block in synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
@@ -928,7 +897,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:65:in `block (3 levels) in <main>'[0m
 
-  39) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録画面を表示しており、フォームの内容が正しい
+  36) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録画面を表示しており、フォームの内容が正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mSign up[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -949,7 +918,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:86:in `block (4 levels) in <main>'[0m
 
-  40) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする バリデーションエラーが表示される
+  37) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする バリデーションエラーが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m"[0m[31mis too short (minimum is 2 characters)[1;31m"[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -970,12 +939,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:92:in `block (4 levels) in <main>'[0m
 
-  41) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする ユーザ編集画面を表示しており、フォームの内容が正しい
+  38) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする ユーザ編集画面を表示しており、フォームの内容が正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31muser[name][1;31m'[0m[31m[0m, [35mwith[0m: @name[0m
       [31m  expected to find field "user[name]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:113:in `block (4 levels) in <main>'[0m
 
-  42) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される
+  39) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m"[0m[31mis too short (minimum is 2 characters)[1;31m"[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -996,12 +965,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:116:in `block (4 levels) in <main>'[0m
 
-  43) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している
+  40) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [31mCapybara::Ambiguous:[0m
+      [31m  Ambiguous match, found 2 elements matching visible xpath "/html"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:301:in `block in synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
@@ -1017,12 +986,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:137:in `block (4 levels) in <main>'[0m
 
-  44) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
+  41) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m"[0m[31mcan't be blank[1;31m"[0m[31m[0m[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [31mCapybara::Ambiguous:[0m
+      [31m  Ambiguous match, found 2 elements matching visible xpath "/html"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:301:in `block in synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
@@ -1038,26 +1007,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:146:in `block (4 levels) in <main>'[0m
 
-  45) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m).text).to be_blank[0m
-      [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:129:in `find_field'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
-      [36m# ./spec/system/03_finishing_touches_spec.rb:167:in `block (4 levels) in <main>'[0m
-
-  46) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される
+  42) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31merror[1;31m'[0m[31m[0m[0m
       [31m[0m
-      [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find xpath "/html"[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [31mCapybara::Ambiguous:[0m
+      [31m  Ambiguous match, found 2 elements matching visible xpath "/html"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:301:in `block in synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:77:in `synchronize'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
@@ -1073,7 +1028,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:171:in `block (4 levels) in <main>'[0m
 
-  47) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
+  43) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBook detail[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1094,12 +1049,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:223:in `block (5 levels) in <main>'[0m
 
-  48) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
+  44) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_book.user.name, [35mhref[0m: user_path(other_book.user)[0m
-      [31m  expected to find link "iiu2gyml0v" with href "/users/1" but there were no matches[0m
+      [31m  expected to find link "tig5sn2shp" with href "/users/1" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:226:in `block (5 levels) in <main>'[0m
 
-  49) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
+  45) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.title[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1120,7 +1075,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:229:in `block (5 levels) in <main>'[0m
 
-  50) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
+  46) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.body[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1141,17 +1096,17 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:232:in `block (5 levels) in <main>'[0m
 
-  51) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示されない
+  47) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_link [31m[1;31m'[0m[31mEdit[1;31m'[0m[31m[0m[0m
       [31m  expected not to find visible link "Edit", found 1 match: "Edit"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:235:in `block (5 levels) in <main>'[0m
 
-  52) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示されない
+  48) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m[0m
       [31m  expected not to find visible link "Destroy", found 1 match: "Destroy"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:238:in `block (5 levels) in <main>'[0m
 
-  53) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
+  49) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1172,12 +1127,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:244:in `block (5 levels) in <main>'[0m
 
-  54) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
+  50) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: edit_user_path(other_user)[0m
       [31m  expected to find link "" with href "/users/1/edit" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:248:in `block (5 levels) in <main>'[0m
 
-  55) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
+  51) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1198,7 +1153,12 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:58:in `does_not_match?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:251:in `block (5 levels) in <main>'[0m
 
-  56) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
+  52) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
+      [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: edit_user_path(user)[0m
+      [31m  expected not to find visible link "" with href "/users/2/edit", found 1 match: ""[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:255:in `block (5 levels) in <main>'[0m
+
+  53) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
       [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31m  expected: "/books"[0m
@@ -1207,17 +1167,17 @@ Failures:
       [31m  (compared using ==)[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:263:in `block (4 levels) in <main>'[0m
 
-  57) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
+  54) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: user_path(other_user)[0m
       [31m  expected to find link "" with href "/users/1" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:277:in `block (5 levels) in <main>'[0m
 
-  58) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
+  55) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_book.title, [35mhref[0m: book_path(other_book)[0m
-      [31m  expected to find link "4hi83" with href "/books/2" but there were no matches[0m
+      [31m  expected to find link "16cbi" with href "/books/2" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:280:in `block (5 levels) in <main>'[0m
 
-  59) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
+  56) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.body[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1238,7 +1198,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:283:in `block (5 levels) in <main>'[0m
 
-  60) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 自分の投稿は表示されない
+  57) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 自分の投稿は表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_content book.title[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1259,7 +1219,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:58:in `does_not_match?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:286:in `block (5 levels) in <main>'[0m
 
-  61) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
+  58) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1280,7 +1240,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:51:in `matches?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:293:in `block (5 levels) in <main>'[0m
 
-  62) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
+  59) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
       [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_content user.name[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
@@ -1301,8 +1261,8 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/rspec/matchers/base.rb:58:in `does_not_match?'[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:300:in `block (5 levels) in <main>'[0m
 
-Finished in 16.68 seconds (files took 3.2 seconds to load)
-[31m197 examples, 62 failures[0m
+Finished in 15.82 seconds (files took 1.83 seconds to load)
+[31m197 examples, 59 failures[0m
 
 Failed examples:
 
@@ -1315,14 +1275,11 @@ Failed examples:
 [31mrspec ./spec/system/02_after_login_spec.rb:50[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分と他人の画像のリンク先が正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:58[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のオピニオンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:65[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:69[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:72[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:101[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:117[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:123[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:126[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:138[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:142[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:145[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:157[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 opinionフォームに値が入っていない[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:206[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される[0m
@@ -1350,7 +1307,6 @@ Failed examples:
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:115[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:134[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:144[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:165[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:170[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:222[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:225[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい[0m
@@ -1361,6 +1317,7 @@ Failed examples:
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:243[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:247[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:250[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない[0m
+[31mrspec ./spec/system/03_finishing_touches_spec.rb:254[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:261[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:276[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:279[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい[0m
