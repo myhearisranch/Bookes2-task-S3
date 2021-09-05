@@ -46,7 +46,9 @@
   <text_area class=""><%= f.text_area :body %></text_area>
 </div>
 
-<div class="btn btn-success"><%= f.submit 'Create Book' %></div>
+<div class=>
+  <%= f.submit 'Create Book' , class: "btn btn-success"  %>
+  </div>
 <% end %>
 </div>
 </div>
@@ -56,10 +58,8 @@
 
 <div class="col-md-8 offset-md-1">
   <h2>Book detail</h2>
-  <table　class="table">
+  <table class="table">
     <tbody>
-
-
       <tr>
       <td> <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %><br>
         <%= link_to @user.name , user_path(@user.id) %>
@@ -67,8 +67,8 @@
 
       <td><%= @book.title%></td>
       <td><%= @book.body %></td>
-      <td><button class="btn btn-sm btn-success"><%= link_to "Edit", edit_book_path(@book.id) %></button> </td>
-      <td><button class="btn btn-sm btn-danger"><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></a></td>
+      <td><%= link_to "Edit", edit_book_path(@book.id) , class: "btn btn-sm btn-success" %></button> </td>
+      <td><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？"  , class: "btn btn-sm btn-danger" %></a></td>
     </tr>
     </tbody>
   </table>

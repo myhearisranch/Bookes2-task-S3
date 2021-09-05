@@ -21,7 +21,7 @@
   </table>
 
   <div class="row">
-   <div><%= link_to "",edit_user_path(@user.id) , class: "btn btn-outline-secondary btn-block fas fa-user-cog " %></div>
+   <%= link_to "",edit_user_path(@user.id) , class: "btn btn-outline-secondary btn-block fas fa-user-cog " %>
   </div>
 
 
@@ -45,11 +45,9 @@
   <div class="form-group">
    <label>Opinon</label>
    <text_area> <%= f.text_area :body %></text_area>
-  </div>
-  <button class="btn btn-success">
-   <%= f.submit 'Create Book' %>
+  </div class="action">
+   <%= f.submit 'Create Book' , class: "btn btn-success" %>
    <% end %>
-   </button>
   </div>
   </div>
 
