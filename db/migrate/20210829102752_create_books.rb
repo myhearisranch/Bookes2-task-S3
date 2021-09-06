@@ -10,8 +10,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
 
       t.timestamps
 
-    validates :title, presence: true
-    validates :body, presence: true
+   
     end
   end
 end
