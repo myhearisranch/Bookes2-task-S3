@@ -44,6 +44,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
      validates :name, presence: true
+     validates :name, length: {minimum: 2}
      validates :introduction, presence: true
   end
 end
