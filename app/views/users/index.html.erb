@@ -23,6 +23,7 @@
   <div class="row">
    <%= link_to "",edit_user_path(@user.id) , class: "btn btn-outline-secondary btn-block fas fa-user-cog " %>
   </div>
+  </div>
 
 
 
@@ -37,21 +38,22 @@
 <% end %>
 
 <%= form_with model: @book, local:true do |f| %>
- <div class="form-group">
-   <label>Title<label>
-   <%= f.text_field :title %>
+ <div class ="form-group">
+     <%= f.label:title %>
+     <%= f.text_field:title, class: 'form-control book_title' %>
  </div>
 
-  <div class="form-group">
-   <label>Opinon</label>
-   <text_area> <%= f.text_area :body %></text_area>
-  </div class="action">
-
+ <div class ="form-group">
+      <%= f.label :opinion %>
+      <%= f.text_field:body, class: 'form-control book_title' %><br>
+ <div class="form-group">
    <%= f.submit 'Create Book' , class: "btn btn-success" %>
-   <% end %>
+ </div>
+  <% end %>
+ </div>
+</div>
 
-  </div>
-  </div>
+
 
   <div class="col-md-8 offset-md-1">
     <h1>Users</h1>
@@ -64,11 +66,10 @@
    <tr>
     <td> <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></td>
     <td><%= user.name %></td>
-    <td><%= link_to "show", user_path(user.id) %> </td>
+    <td><%= link_to "Show", user_path(user.id) %> </td>
    </tr>
    <% end %>
   </table>
-  </div>
 </div>
 
 

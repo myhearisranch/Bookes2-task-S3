@@ -36,19 +36,20 @@
 
 <%= form_with model: @book, local:true do |f| %>
  <div class ="form-group">
-  <label>Title</label>
-  <text_area class=""><%= f.text_field :title %></text_area>
+     <%= f.label:title %>
+     <%= f.text_field:title, class: 'form-control book_title' %>
  </div>
 
  <div class ="form-group">
-  <label>Opinon</label>
-  <text_area class= ><%= f.text_area :body %></text_area>
+      <%= f.label :opinion %>
+      <%= f.text_field:body, class: 'form-control book_title' %><br>
  <div class="form-group">
-   <%= f.submit 'Create Book' , class: "btn btn-success"  %>
+   <%= f.submit 'Create Book' , class: "btn btn-success" %>
  </div>
   <% end %>
  </div>
 </div>
+
 
 
 <div class="col-md-8 offset-md-1">

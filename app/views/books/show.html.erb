@@ -34,23 +34,21 @@
 
 
                       <%= form_with model: @book_new, local:true do |f| %>
-                         <div class="form-group">
-                           <label for="book_title">Title</label>
-                            <%= f.text_field :title %>
+                          <div class ="form-group">
+                             <%= f.label:title %>
+                             <%= f.text_field:title, class: 'form-control book_title' %>
                          </div>
 
-                          <div class="form-group">
-                            <label for="book_opinion">Opinon</label>
-                              <text_area><%= f.text_area :body %></text_area>
-                          </div>
-
-                          <div>
-                          <%= f.submit 'Create Book' , class: "btn btn-success"  %>
-                          </div>
-                      <% end %>
-        </div>
-    </div>
-
+                             <div class ="form-group">
+                                  <%= f.label :opinion %>
+                                  <%= f.text_field:body, class: 'form-control book_title' %><br>
+                                 <div class="form-group">
+                                   <%= f.submit 'Create Book' , class: "btn btn-success" %>
+                                 </div>
+                        <% end %>
+                 </div>
+            </div>
+          </div>
 
 
 
@@ -79,5 +77,4 @@
               </tr>
           </tbody>
         </table>
-      </div>
 </div>
