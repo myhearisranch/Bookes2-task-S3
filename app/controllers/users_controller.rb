@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   @user = current_user
   @book =Book.new
   @users = User.all
+  #ログインしている人の投稿を載せない方法を下記のように考えた
+  #@users = User.where.not(name: @user.name)
  end
 
  def show
@@ -30,7 +32,6 @@ class UsersController < ApplicationController
       flash[:notice] = "successfully"
       redirect_to user_path(@user)
    else
-    flash[:notice] = "error"
     render :edit
    end
  end
