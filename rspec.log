@@ -1,4 +1,14 @@
 
+BookCommentモデルのテスト
+  バリデーションのテスト
+    commentカラム
+[32m      空欄でないこと[0m
+  アソシエーションのテスト
+    Bookモデルとの関係
+[32m      N:1となっている[0m
+    Userモデルとの関係
+[32m      N:1となっている[0m
+
 Bookモデルのテスト
   バリデーションのテスト
     titleカラム
@@ -8,6 +18,19 @@ Bookモデルのテスト
 [32m      200文字以下であること: 200文字は〇[0m
 [32m      200文字以下であること: 201文字は×[0m
   アソシエーションのテスト
+    Userモデルとの関係
+[32m      N:1となっている[0m
+    BookCommentモデルとの関係
+[32m      1:Nとなっている[0m
+    Favoriteモデルとの関係
+[32m      1:Nとなっている[0m
+
+Favoriteモデルのテスト
+  バリデーションのテスト
+[32m    ユーザーは一つの投稿に一つしかいいねできない[0m
+  アソシエーションのテスト
+    Bookモデルとの関係
+[32m      N:1となっている[0m
     Userモデルとの関係
 [32m      N:1となっている[0m
 
@@ -25,6 +48,10 @@ Userモデルのテスト
 [32m      50文字以下であること: 51文字は×[0m
   アソシエーションのテスト
     Bookモデルとの関係
+[32m      1:Nとなっている[0m
+    BookCommentモデルとの関係
+[32m      1:Nとなっている[0m
+    Favoriteモデルとの関係
 [32m      1:Nとなっている[0m
 
 [STEP1] ユーザログイン前のテスト
@@ -68,7 +95,7 @@ Userモデルのテスト
 [32m      「Log in」と表示される[0m
 [32m      nameフォームが表示される[0m
 [32m      passwordフォームが表示される[0m
-[32m      Log inボタンが表示される[0m
+[32m      Sign upボタンが表示される[0m
 [32m      emailフォームは表示されない[0m
     ログイン成功のテスト
 [32m      ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている[0m
@@ -145,15 +172,15 @@ Userモデルのテスト
 [32m      Showリンクが表示される[0m
 [32m      Backリンクが表示される[0m
     編集成功のテスト
-[31m      titleが正しく更新される (FAILED - 1)[0m
-[31m      bodyが正しく更新される (FAILED - 2)[0m
-[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 3)[0m
+[32m      titleが正しく更新される[0m
+[32m      bodyが正しく更新される[0m
+[32m      リダイレクト先が、更新した投稿の詳細画面になっている[0m
   ユーザ一覧画面のテスト
     表示内容の確認
 [32m      URLが正しい[0m
 [32m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する[0m
 [32m      自分と他人の名前がそれぞれ表示される[0m
-[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 4)[0m
+[32m      自分と他人のshowリンクがそれぞれ表示される[0m
     サイドバーの確認
 [32m      自分の名前と紹介文が表示される[0m
 [32m      自分のユーザ編集画面へのリンクが存在する[0m
@@ -281,47 +308,308 @@ Userモデルのテスト
 [32m      投稿一覧画面でレンチアイコンが表示される[0m
 [32m      投稿詳細画面でレンチアイコンが表示される[0m
 
+[STEP4] いいねとコメントのテスト
+  投稿一覧画面のテスト[課題4追加分]
+    表示の確認
+[31m      いいねボタンのハートアイコンが表示される (FAILED - 1)[0m
+[31m      いいねボタンが表示される (FAILED - 2)[0m
+[32m      コメント数が表示される[0m
+    いいね作成機能のテスト
+[31m      自分のいいねが正しく保存される (FAILED - 3)[0m
+[31m      リダイレクト先が投稿一覧画面になっている (FAILED - 4)[0m
+[31m      リダイレクト先でいいね数が正しく更新されている (FAILED - 5)[0m
+    いいね削除機能のテスト
+[31m      自分のいいねが正しく削除される (FAILED - 6)[0m
+[31m      リダイレクト先が投稿一覧画面になっている (FAILED - 7)[0m
+[31m      リダイレクト先でいいね数が正しく更新されている (FAILED - 8)[0m
+  自分の投稿詳細画面のテスト[課題4追加分]
+    表示の確認
+[31m      いいねボタンのハートアイコンが表示される (FAILED - 9)[0m
+[32m      いいねボタンが表示される[0m
+[32m      コメント数が表示される[0m
+[32m      コメント一覧でコメント投稿者の画像が表示される: fallbackの画像がサイドバーの1つ＋Book detail直下の1つ＋コメント一覧(2人)の2つの計4つ存在する[0m
+[32m      コメント一覧でコメント投稿者の名前が表示される[0m
+[31m      コメント一覧でコメントの内容が表示される (FAILED - 10)[0m
+[31m      自分が投稿したコメントの削除ボタンが表示される (FAILED - 11)[0m
+[32m      他人が投稿したコメントの削除ボタンは表示されない[0m
+[32m      コメント投稿フォームが表示される[0m
+[32m      送信ボタンが表示される[0m
+    いいね機能のテスト
+[32m      自分のいいねが正しく保存される[0m
+[32m      リダイレクト先が、いいねをした投稿詳細画面になっている[0m
+[32m      リダイレクト先でいいね数が正しく更新されている[0m
+    コメント追加機能のテスト
+[32m      自分のコメントが正しく保存される[0m
+[32m      リダイレクト先が、コメントをした投稿詳細画面になっている[0m
+[32m      リダイレクト先でコメント数が正しく更新されている[0m
+[31m      リダイレクト先で新しいコメントが表示されている (FAILED - 12)[0m
+    コメント削除機能のテスト
+[31m      自分のコメントが正しく削除される (FAILED - 13)[0m
+[31m      リダイレクト先が、コメントをしていた投稿詳細画面になっている (FAILED - 14)[0m
+[31m      リダイレクト先でコメント数が正しく更新されている (FAILED - 15)[0m
+[31m      リダイレクト先で削除したコメントは表示されない (FAILED - 16)[0m
+  自分のユーザ詳細画面のテスト[課題4追加分]
+    表示の確認
+[31m      いいねボタンのハートアイコンが表示される (FAILED - 17)[0m
+[31m      いいねボタンが表示される (FAILED - 18)[0m
+[32m      コメント数が表示される[0m
+    いいね作成機能のテスト
+[31m      自分のいいねが正しく保存される (FAILED - 19)[0m
+[31m      リダイレクト先が自分のユーザ詳細画面になっている (FAILED - 20)[0m
+[31m      リダイレクト先でいいね数が正しく更新されている (FAILED - 21)[0m
+
 Failures:
 
-  1) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
-     [31mFailure/Error: [0m[32mexpect[0m(book.reload.title).not_to eq @book_old_title[0m
-     [31m[0m
-     [31m  expected: value != "u2z4z"[0m
-     [31m       got: "u2z4z"[0m
-     [31m[0m
-     [31m  (compared using ==)[0m
-     [36m# ./spec/system/02_after_login_spec.rb:236:in `block (4 levels) in <main>'[0m
+  1) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される
+     [31mFailure/Error: [0m[32mexpect[0m(page).to have_selector([31m[1;31m'[0m[31m.fa-heart[1;31m'[0m[31m[0m)[0m
+     [31m  expected to find css ".fa-heart" but there were no matches[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:25:in `block (4 levels) in <main>'[0m
 
-  2) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
-     [31mFailure/Error: [0m[32mexpect[0m(book.reload.body).not_to eq @book_old_body[0m
-     [31m[0m
-     [31m  expected: value != "i4t9n8fd74l17n33iebv"[0m
-     [31m       got: "i4t9n8fd74l17n33iebv"[0m
-     [31m[0m
-     [31m  (compared using ==)[0m
-     [36m# ./spec/system/02_after_login_spec.rb:239:in `block (4 levels) in <main>'[0m
+  2) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] 表示の確認 いいねボタンが表示される
+     [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
+     [31m  expected to find link "" with href "/books/1/favorites" but there were no matches[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:28:in `block (4 levels) in <main>'[0m
 
-  3) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
-     [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + book.id.to_s[0m
+  3) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト 自分のいいねが正しく保存される
+     [31mFailure/Error: [0m[32mexpect[0m { click_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book) }.to change(user.favorites, [33m:count[0m).by([1;34m1[0m)[0m
      [31m[0m
-     [31m  expected: "/books/1"[0m
-     [31m       got: "/books/3"[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/1/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:38:in `block (5 levels) in <main>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:38:in `block (4 levels) in <main>'[0m
+
+  4) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先が投稿一覧画面になっている
+     [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
      [31m[0m
-     [31m  (compared using ==)[0m
-     [36m# ./spec/system/02_after_login_spec.rb:242:in `block (4 levels) in <main>'[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/1/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:41:in `block (4 levels) in <main>'[0m
 
-  4) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
-     [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mShow[1;31m'[0m[31m[0m, [35mhref[0m: user_path(user)[0m
-     [31m  expected to find link "Show" with href "/users/2" but there were no matches[0m
-     [36m# ./spec/system/02_after_login_spec.rb:265:in `block (4 levels) in <main>'[0m
+  5) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先でいいね数が正しく更新されている
+     [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/1/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:45:in `block (4 levels) in <main>'[0m
 
-Finished in 16.89 seconds (files took 1.91 seconds to load)
-[31m197 examples, 4 failures[0m
+  6) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト 自分のいいねが正しく削除される
+     [31mFailure/Error: [0m[32mexpect[0m { click_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(other_book) }.to change(user.favorites, [33m:count[0m).by([1;34m-1[0m)[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/2/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:51:in `block (5 levels) in <main>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:51:in `block (4 levels) in <main>'[0m
+
+  7) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト リダイレクト先が投稿一覧画面になっている
+     [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(other_book)[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/2/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:54:in `block (4 levels) in <main>'[0m
+
+  8) [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト リダイレクト先でいいね数が正しく更新されている
+     [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(other_book)[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find link "" with href "/books/2/favorites"[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:58:in `block (4 levels) in <main>'[0m
+
+  9) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される
+     [31mFailure/Error: [0m[32mexpect[0m(page).to have_selector([31m[1;31m'[0m[31m.fa-heart[1;31m'[0m[31m[0m)[0m
+     [31m  expected to find css ".fa-heart" but there were no matches[0m
+     [36m# ./spec/system/04_favorite_comment_spec.rb:70:in `block (4 levels) in <main>'[0m
+
+  10) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 コメント一覧でコメントの内容が表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user_book_comment.comment[0m
+      [31m  expected to find text "syrqxxjhvj" in "Bookers\nHome Users Books logout\nUser info\nname 0sjlqajufs introduction r0jzmf3lkq3fat2kadtn\nNew book\nTitle\nOpinion\nBook detail\n0sjlqajufs 582kf vl1elng9u2x6x836fyhg Edit Destroy ♡0 コメント件数 : 2\n0sjlqajufs 2021/09/10 Delete\nimi73jz3cm 2021/09/10\nCopyRight Infratop.inc"[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:86:in `block (4 levels) in <main>'[0m
+
+  11) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 自分が投稿したコメントの削除ボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: book_book_comment_path([35mbook_id[0m: book.id, [35mid[0m: user_book_comment.id)[0m
+      [31m  expected to find link "Destroy" with href "/books/1/book_comments/1" but there were no matches[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:90:in `block (4 levels) in <main>'[0m
+
+  12) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント追加機能のテスト リダイレクト先で新しいコメントが表示されている
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content @comment[0m
+      [31m  expected to find text "75okh3w33r" in "Bookers\nHome Users Books logout\nUser info\nname 06i1yb7e04 introduction 7s0b8pbu30o76hh5yw32\nNew book\nTitle\nOpinion\nBook detail\n06i1yb7e04 zqeap hyzckuykyocgd1n6g00q Edit Destroy ♡0 コメント件数 : 3\n06i1yb7e04 2021/09/10 Delete\n89bddozjpq 2021/09/10\n06i1yb7e04 2021/09/10 Delete\nCopyRight Infratop.inc"[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:133:in `block (4 levels) in <main>'[0m
+
+  13) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト 自分のコメントが正しく削除される
+      [31mFailure/Error: [0m[32mexpect[0m { click_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: @destroy_link }.to change(user.book_comments, [33m:count[0m).by([1;34m-1[0m)[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "Destroy" with href "/books/1/book_comments/1"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:143:in `block (5 levels) in <main>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:143:in `block (4 levels) in <main>'[0m
+
+  14) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先が、コメントをしていた投稿詳細画面になっている
+      [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: @destroy_link[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "Destroy" with href "/books/1/book_comments/1"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:146:in `block (4 levels) in <main>'[0m
+
+  15) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先でコメント数が正しく更新されている
+      [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: @destroy_link[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "Destroy" with href "/books/1/book_comments/1"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:150:in `block (4 levels) in <main>'[0m
+
+  16) [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先で削除したコメントは表示されない
+      [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: @destroy_link[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "Destroy" with href "/books/1/book_comments/1"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:154:in `block (4 levels) in <main>'[0m
+
+  17) [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_selector([31m[1;31m'[0m[31m.fa-heart[1;31m'[0m[31m[0m)[0m
+      [31m  expected to find css ".fa-heart" but there were no matches[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:166:in `block (4 levels) in <main>'[0m
+
+  18) [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
+      [31m  expected to find link "" with href "/books/1/favorites" but there were no matches[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:169:in `block (4 levels) in <main>'[0m
+
+  19) [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト 自分のいいねが正しく保存される
+      [31mFailure/Error: [0m[32mexpect[0m { click_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book) }.to change(user.favorites, [33m:count[0m).by([1;34m1[0m)[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "" with href "/books/1/favorites"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:177:in `block (5 levels) in <main>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:177:in `block (4 levels) in <main>'[0m
+
+  20) [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先が自分のユーザ詳細画面になっている
+      [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "" with href "/books/1/favorites"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:180:in `block (4 levels) in <main>'[0m
+
+  21) [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先でいいね数が正しく更新されている
+      [31mFailure/Error: [0mclick_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: book_favorites_path(book)[0m
+      [31m[0m
+      [31mCapybara::ElementNotFound:[0m
+      [31m  Unable to find link "" with href "/books/1/favorites"[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:303:in `block in synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/base.rb:83:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:292:in `synced_resolve'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/finders.rb:53:in `find'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/session.rb:768:in `block (2 levels) in <class:Session>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.35.3/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
+      [36m# ./spec/system/04_favorite_comment_spec.rb:184:in `block (4 levels) in <main>'[0m
+
+Finished in 21.12 seconds (files took 1.62 seconds to load)
+[31m243 examples, 21 failures[0m
 
 Failed examples:
 
-[31mrspec ./spec/system/02_after_login_spec.rb:235[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:238[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:241[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:264[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:24[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:27[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] 表示の確認 いいねボタンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:37[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト 自分のいいねが正しく保存される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:40[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先が投稿一覧画面になっている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:44[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先でいいね数が正しく更新されている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:50[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト 自分のいいねが正しく削除される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:53[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト リダイレクト先が投稿一覧画面になっている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:57[0m [36m# [STEP4] いいねとコメントのテスト 投稿一覧画面のテスト[課題4追加分] いいね削除機能のテスト リダイレクト先でいいね数が正しく更新されている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:69[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:85[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 コメント一覧でコメントの内容が表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:89[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] 表示の確認 自分が投稿したコメントの削除ボタンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:131[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント追加機能のテスト リダイレクト先で新しいコメントが表示されている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:142[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト 自分のコメントが正しく削除される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:145[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先が、コメントをしていた投稿詳細画面になっている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:149[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先でコメント数が正しく更新されている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:153[0m [36m# [STEP4] いいねとコメントのテスト 自分の投稿詳細画面のテスト[課題4追加分] コメント削除機能のテスト リダイレクト先で削除したコメントは表示されない[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:165[0m [36m# [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンのハートアイコンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:168[0m [36m# [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] 表示の確認 いいねボタンが表示される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:176[0m [36m# [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト 自分のいいねが正しく保存される[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:179[0m [36m# [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先が自分のユーザ詳細画面になっている[0m
+[31mrspec ./spec/system/04_favorite_comment_spec.rb:183[0m [36m# [STEP4] いいねとコメントのテスト 自分のユーザ詳細画面のテスト[課題4追加分] いいね作成機能のテスト リダイレクト先でいいね数が正しく更新されている[0m
 
