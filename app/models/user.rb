@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   
   #都道府県コードから都道府県名に自動で変換する。
-  include jpPrefecture
+  include JpPrefecture
   jp_prefecture :prefecture_code
   
   #~.prefecture_nameで都道府県名を参照出来る様にする。

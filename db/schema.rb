@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2021_09_10_053350) do
     t.string "address_city"
     t.string "address_street"
     t.string "address_building"
+    t.float "latitude"
+    t.float "longitube"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
