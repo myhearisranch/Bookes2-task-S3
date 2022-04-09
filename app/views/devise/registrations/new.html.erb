@@ -22,7 +22,7 @@
   </div>
   
   <div class="field">
-    <%= f.label :prefecture_name , 'Prefecture code' %><br />
+    <%= f.label :prefecture_code , 'Prefecture code' %><br />
     <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, {prompt: '選択してください'} %>
   </div>
   
