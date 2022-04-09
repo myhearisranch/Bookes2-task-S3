@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 2021_09_10_053350) do
     t.integer "prefecture_code"
     t.string "address_city"
     t.string "address_street"
-    t.string "address_building"
     t.float "latitude"
     t.float "longitube"
     t.datetime "created_at", null: false

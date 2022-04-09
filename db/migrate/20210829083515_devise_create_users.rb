@@ -39,7 +39,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :prefecture_code
       t.string :address_city
       t.string :address_street
-      t.string :address_building
       
       t.float :latitude
       t.float :longitube
